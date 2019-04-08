@@ -1,4 +1,4 @@
-const { add } = require("./operations");
+const { add, addAll } = require("./operations");
 
 //Testing Add implementation
 describe("Testing Add implementation", () => {
@@ -10,5 +10,18 @@ describe("Testing Add implementation", () => {
   });
   it("Parameter should only be Numbers", () => {
     expect(add(3, "4")).toBeFalsy();
+  });
+});
+
+//Testing for AddAll Operation
+describe("Add operation for Infinite numbers", () => {
+  it("Addition of 1 and 1 equals 2", () => {
+    expect(add([1, 1])).toBe(2);
+  });
+  it("Addition of multiple value", () => {
+    expect(add([1, 2, 3, 4, 5, 6, 7, 8, 8, 9, 10])).toBe(385);
+  });
+  it("Parameter should only be Numbers", () => {
+    expect(add([" ", 2, 3, 4, 5, 6, 7, 8, 8, 9, 10])).toBeFalsy();
   });
 });
