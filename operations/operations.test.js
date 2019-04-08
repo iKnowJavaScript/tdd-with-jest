@@ -9,6 +9,6 @@ describe("Testing Add implementation", () => {
     expect(add(233, 152)).toBe(385);
   });
   it("Parameter should only be Numbers", () => {
-    expect(add(4, "4")).toBe("Input Must be Numbers only");
+    expect(add(3, "4")).toBeFalsy();
   });
 });
