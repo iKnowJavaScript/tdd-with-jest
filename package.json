@@ -1,0 +1,23 @@
+{
+  "name": "tdd-with-jest",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --watchAll"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iKnowJavaScript/tdd-with-jest.git"
+  },
+  "keywords": [],
+  "author": "Omolayo Victor",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/iKnowJavaScript/tdd-with-jest/issues"
+  },
+  "homepage": "https://github.com/iKnowJavaScript/tdd-with-jest#readme",
+  "devDependencies": {
+    "jest": "^24.7.1"
+  }
+}
