@@ -1,4 +1,4 @@
-const { add, addAll, subtract, muliply } = require("./operations");
+const { add, addAll, subtract, multiply } = require("./operations");
 
 //Testing Add implementation
 describe("Testing Add implementation", () => {
@@ -48,20 +48,20 @@ describe("Testing Subbtaction implementation", () => {
 //Testting Multiply implimentation
 describe("Testing Multiply implimentation", () => {
   it("Multiplication of 4 and 4", () => {
-    expect(muliply(4, 4)).toBe(16);
+    expect(multiply(4, 4)).toBe(16);
   });
   it("Multiplication of 1 and 1", () => {
-    expect(muliply(1, 1)).toBe(1);
+    expect(multiply(1, 1, 2, 3, 4)).toBe(24);
   });
   it("Multiplication of 1 and 1", () => {
-    expect(muliply(11, -8)).toBe(1);
+    expect(multiply(11, -8)).toBe(-88);
   });
   it("Multiplication of 1132 and 1131331", () => {
-    expect(muliply(1132, 1131331)).toBe(1280666692);
+    expect(multiply(1132, 1131331)).toBe(1280666692);
   });
   it("All parameter should only be Numbers", () => {
     function logError() {
-      addAll([], 2, 3, 4, 5, 6, 7, 8, 8, 9, 10);
+      multiply([], 2, 3, 4, 5, 6, 7, 8, 8, 9, 10);
     }
     expect(logError).toThrowError(Error);
   });

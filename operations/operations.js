@@ -7,9 +7,8 @@ const add = function(a, b) {
 const addAll = function() {
   let total = 0;
   for (let arg in arguments) {
-
     let loop = typeof arguments[arg] === "number";
-    
+
     if (!loop) {
       throw new Error("Only Numbers are allowed");
     } else {
@@ -22,6 +21,20 @@ const addAll = function() {
 //Subraction Operation
 const subtract = function(a, b) {
   return typeof a === "number" && typeof b === "number" ? a - b : false;
-}
+};
 
-module.exports = { add, addAll, subtract, muliply };
+const multiply = function() {
+  let total = 1;
+  for (let arg in arguments) {
+    let loop = typeof arguments[arg] === "number";
+
+    if (!loop) {
+      throw new Error("Only Numbers are allowed");
+    } else {
+      total *= arguments[arg];
+    }
+  }
+  return total;
+};
+
+module.exports = { add, addAll, subtract, multiply };
