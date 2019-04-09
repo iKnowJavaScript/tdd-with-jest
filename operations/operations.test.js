@@ -1,4 +1,4 @@
-const { add, addAll, subtract, multiply, divide } = require("./operations");
+const { add, addAll, subtract, multiply, divide, joinString } = require("./operations");
 
 //Testing Add implementation
 describe("Testing Add implementation", () => {
@@ -77,5 +77,18 @@ describe("Testing Division implementation", () => {
   });
   it("Parameter should only be Numbers", () => {
     expect(divide(3, "4")).toBeFalsy();
+  });
+});
+
+//Testing String Concatenation Operation
+describe("Testing String Concatenation implementation", () => {
+  it('Concatenate of "Well" and "Done"', () => {
+    expect(joinString("Well", "Done")).toBe("WellDone");
+  });
+  it('Concatenate of "Good" and "Job"', () => {
+    expect(joinString("Good", "Job")).toBe("GoodJob");
+  });
+  it("Parameter should only be String", () => {
+    expect(joinString("Well", 4)).toBeFalsy();
   });
 });

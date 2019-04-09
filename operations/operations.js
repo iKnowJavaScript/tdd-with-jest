@@ -38,9 +38,14 @@ const multiply = function() {
   return total;
 };
 
-//DIvision Operation
+//Division Operation
 const divide = function (a, b) {
   return typeof a === "number" && typeof b === "number" ? a / b : false;
 }
 
-module.exports = { add, addAll, subtract, multiply, divide };
+
+
+module.exports = { add, addAll, subtract, multiply, divide, joinString };
+
+
+
