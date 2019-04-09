@@ -1,4 +1,4 @@
-const { add, addAll, subtract, multiply } = require("./operations");
+const { add, addAll, subtract, multiply, divide } = require("./operations");
 
 //Testing Add implementation
 describe("Testing Add implementation", () => {
@@ -37,7 +37,7 @@ describe("Testing Subbtaction implementation", () => {
   it("Subtraction of 23 and 50", () => {
     expect(subtract(23, 50)).toBe(-27);
   });
-  it("Subtraction of 21 and 111", () => {
+  it("Subtraction of 111 and 21", () => {
     expect(subtract(111, 21)).toBe(90);
   });
   it("Parameter should only be Numbers", () => {
@@ -50,10 +50,10 @@ describe("Testing Multiply implimentation", () => {
   it("Multiplication of 4 and 4", () => {
     expect(multiply(4, 4)).toBe(16);
   });
-  it("Multiplication of 1 and 1", () => {
+  it("Multiplication of many numbers", () => {
     expect(multiply(1, 1, 2, 3, 4)).toBe(24);
   });
-  it("Multiplication of 1 and 1", () => {
+  it("Multiplication of 11 and -8", () => {
     expect(multiply(11, -8)).toBe(-88);
   });
   it("Multiplication of 1132 and 1131331", () => {
@@ -64,5 +64,18 @@ describe("Testing Multiply implimentation", () => {
       multiply([], 2, 3, 4, 5, 6, 7, 8, 8, 9, 10);
     }
     expect(logError).toThrowError(Error);
+  });
+});
+
+//Testing Division implementation
+describe("Testing Division implementation", () => {
+  it("Subtraction of 1 and 2", () => {
+    expect(divide(1, 2)).toBe(0.5);
+  });
+  it("Subtraction of 100 and 25", () => {
+    expect(divide(100, 25)).toBe(4);
+  });
+  it("Parameter should only be Numbers", () => {
+    expect(divide(3, "4")).toBeFalsy();
   });
 });

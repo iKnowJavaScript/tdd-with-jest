@@ -23,6 +23,7 @@ const subtract = function(a, b) {
   return typeof a === "number" && typeof b === "number" ? a - b : false;
 };
 
+//Multiplication Operation
 const multiply = function() {
   let total = 1;
   for (let arg in arguments) {
@@ -37,4 +38,9 @@ const multiply = function() {
   return total;
 };
 
-module.exports = { add, addAll, subtract, multiply };
+//DIvision Operation
+const divide = function (a, b) {
+  return typeof a === "number" && typeof b === "number" ? a / b : false;
+}
+
+module.exports = { add, addAll, subtract, multiply, divide };
