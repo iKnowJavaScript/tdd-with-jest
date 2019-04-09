@@ -17,5 +17,8 @@ const addAll = function() {
   return total;
 };
 
+const subtract = function(a, b) {
+  return typeof a === "number" && typeof b === "number" ? a - b : false;
+}
 
-module.exports = { add, addAll };
+module.exports = { add, addAll, subtract };
