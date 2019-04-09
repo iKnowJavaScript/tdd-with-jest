@@ -16,12 +16,15 @@ describe("Testing Add implementation", () => {
 //Testing for AddAll Operation
 describe("Add operation for Infinite numbers", () => {
   it("Addition of 1 and 1 equals 2", () => {
-    expect(add([1, 1])).toBe(2);
+    expect(addAll(1, 1)).toBe(2);
   });
   it("Addition of multiple value", () => {
-    expect(add([1, 2, 3, 4, 5, 6, 7, 8, 8, 9, 10])).toBe(385);
+    expect(addAll(11, 2, 3, 4, 5, 6, 7, 8, 8, 9, 10)).toBe(73);
   });
   it("Parameter should only be Numbers", () => {
-    expect(add([" ", 2, 3, 4, 5, 6, 7, 8, 8, 9, 10])).toBeFalsy();
+    function logError() {
+      addAll([], 2, 3, 4, 5, 6, 7, 8, 8, 9, 10);
+    }
+    expect(logError).toThrowError(Error);
   });
 });
