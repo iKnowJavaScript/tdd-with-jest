@@ -1,4 +1,11 @@
-const { add, addAll, subtract, multiply, divide, joinString } = require("./operations");
+const {
+  add,
+  addAll,
+  subtract,
+  multiply,
+  divide,
+  joinString
+} = require("./operations");
 
 //Testing Add implementation
 describe("Testing Add implementation", () => {
@@ -14,7 +21,7 @@ describe("Testing Add implementation", () => {
 });
 
 //Testing for AddAll Operation
-describe("Add operation for Infinite numbers", () => {
+describe("Testing add operation for Infinite numbers", () => {
   it("Addition of 1 and 1 equals 2", () => {
     expect(addAll(1, 1)).toBe(2);
   });
@@ -46,7 +53,7 @@ describe("Testing Subbtaction implementation", () => {
 });
 
 //Testting Multiply implimentation
-describe("Testing Multiply implimentation", () => {
+describe("Testing Multiply implimentation for infinite number", () => {
   it("Multiplication of 4 and 4", () => {
     expect(multiply(4, 4)).toBe(16);
   });
