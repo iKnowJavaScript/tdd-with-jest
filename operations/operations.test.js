@@ -1,4 +1,4 @@
-const { add, addAll } = require("./operations");
+const { add, addAll, subtract } = require("./operations");
 
 //Testing Add implementation
 describe("Testing Add implementation", () => {
@@ -26,5 +26,21 @@ describe("Add operation for Infinite numbers", () => {
       addAll([], 2, 3, 4, 5, 6, 7, 8, 8, 9, 10);
     }
     expect(logError).toThrowError(Error);
+  });
+});
+
+//Testing Subbtaction implementation
+describe("Testing Subbtaction implementation", () => {
+  it("Subtraction of 1 and 1", () => {
+    expect(subtract(1, 1)).toBe(0);
+  });
+  it("Subtraction of 23 and 50", () => {
+    expect(subtract(23, 50)).toBe(-27);
+  });
+  it("Subtraction of 21 and 111", () => {
+    expect(subtract(111, 21)).toBe(90);
+  });
+  it("Parameter should only be Numbers", () => {
+    expect(subtract(3, "4")).toBeFalsy();
   });
 });
