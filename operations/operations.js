@@ -43,7 +43,10 @@ const divide = function (a, b) {
   return typeof a === "number" && typeof b === "number" ? a / b : false;
 }
 
-
+//String Concatenation Operation
+const joinString = function(a, b) {
+  return typeof a === "string" && typeof b === "string" ? a.concat(b) : false;
+}
 
 module.exports = { add, addAll, subtract, multiply, divide, joinString };
 
