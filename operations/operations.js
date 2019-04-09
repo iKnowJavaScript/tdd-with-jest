@@ -1,7 +1,9 @@
+//Addition Operation
 const add = function(a, b) {
   return typeof a === "number" && typeof b === "number" ? a + b : false;
 };
 
+//Adding Infinite sum of numbers
 const addAll = function() {
   let total = 0;
   for (let arg in arguments) {
@@ -17,6 +19,7 @@ const addAll = function() {
   return total;
 };
 
+//Subraction Operation
 const subtract = function(a, b) {
   return typeof a === "number" && typeof b === "number" ? a - b : false;
 }
