@@ -51,7 +51,13 @@ describe("Testing Subbtaction implementation", () => {
     expect(subtract(111, 21)).toBe(90);
   });
   it("Parameter should only be Numbers", () => {
-    expect(subtract(3, "4")).toBeFalsy();
+    expect(subtract(3, "4")).toMatch(/Must be Numbers/);
+  });
+  it("Parameter should at least be two", () => {
+    expect(subtract(3)).toMatch(/only two Numbers/);
+  });
+  it("Parameter should not be more than two", () => {
+    expect(subtract(3, 3, 3, 4)).toMatch(/only two Numbers/);
   });
 });
 
