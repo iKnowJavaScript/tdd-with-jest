@@ -4,7 +4,7 @@ logs
 node_modules
 package-lock.json
 *tempCodeRunnerFile.js
-
+/coverage
 # 
 # Optional npm cache directory
 .npm
