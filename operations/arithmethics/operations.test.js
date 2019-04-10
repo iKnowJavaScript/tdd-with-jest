@@ -111,6 +111,12 @@ describe("Testing String Concatenation implementation", () => {
     expect(joinString("Good", "Job")).toBe("GoodJob");
   });
   it("Parameter should only be String", () => {
-    expect(joinString("Well", 4)).toBeFalsy();
+    expect(joinString("Well", 4)).toMatch(/Must be String/);
+  });
+  it("Parameter should at least be two", () => {
+    expect(joinString("Well")).toMatch(/only two String/);
+  });
+  it("Parameter should not be more than two", () => {
+    expect(joinString("Good", "Job", "Well", "Done")).toMatch(/only two String/);
   });
 });
