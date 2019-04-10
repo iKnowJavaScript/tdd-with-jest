@@ -31,6 +31,9 @@ describe("Testing add operation for Infinite numbers", () => {
   it("Addition of multiple value", () => {
     expect(addAll(11, 2, 3, 4, 5, 6, 7, 8, 8, 9, 10)).toBe(73);
   });
+  it("Parameter should at least be two", () => {
+    expect(addAll(1)).toMatch(/least two Number/);
+  });
   it("Parameter should only be Numbers", () => {
     function logError() {
       addAll([], 2, 3, 4, 5, 6, 7, 8, 8, 9, 10);
@@ -74,6 +77,9 @@ describe("Testing Multiply implimentation for infinite number", () => {
   });
   it("Multiplication of 1132 and 1131331", () => {
     expect(multiply(1132, 1131331)).toBe(1280666692);
+  });
+  it("Parameter should at least be two", () => {
+    expect(multiply(1)).toMatch(/least two Number/);
   });
   it("All parameter should only be Numbers", () => {
     function logError() {

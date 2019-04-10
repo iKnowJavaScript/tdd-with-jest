@@ -9,6 +9,8 @@ const twoSum = function(a, b) {
 
 //Adding Infinite sum of numbers
 const addAll = function() {
+  if(arguments.length < 2) return "Input at least two Number";
+  
   let total = 0;
   for (let arg in arguments) {
     let loop = typeof arguments[arg] === "number";
@@ -33,6 +35,9 @@ const subtract = function(a, b) {
 
 //Multiplication Operation
 const multiply = function() {
+  
+  if(arguments.length < 2) return "Input at least two Number";
+
   let total = 1;
   for (let arg in arguments) {
     let loop = typeof arguments[arg] === "number";
@@ -45,6 +50,8 @@ const multiply = function() {
   }
   return total;
 };
+
+
 
 //Division Operation
 const divide = function(a, b) {
