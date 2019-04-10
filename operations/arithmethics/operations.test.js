@@ -8,7 +8,7 @@ const {
 } = require("./operations");
 
 //Testing twoSum implementation
-describe("Testing Add implementation", () => {
+describe("Testing twoSum implementation", () => {
   it("Add of Two large sum", () => {
     expect(twoSum(233, 152)).toBe(385);
   });
