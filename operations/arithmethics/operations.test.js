@@ -1,5 +1,5 @@
 const {
-  add,
+  twoSum,
   addAll,
   subtract,
   multiply,
@@ -7,16 +7,19 @@ const {
   joinString
 } = require("./operations");
 
-//Testing Add implementation
+//Testing twoSum implementation
 describe("Testing Add implementation", () => {
-  it("Add of 1 and 1 equals 2", () => {
-    expect(add(1, 1)).toBe(2);
-  });
   it("Add of Two large sum", () => {
-    expect(add(233, 152)).toBe(385);
+    expect(twoSum(233, 152)).toBe(385);
   });
   it("Parameter should only be Numbers", () => {
-    expect(add(3, "4")).toBeFalsy();
+    expect(twoSum(3, "4")).toMatch(/Must be Numbers/);
+  });
+  it("Parameter should at least be two", () => {
+    expect(twoSum(3)).toMatch(/only two Numbers/);
+  });
+  it("Parameter should not be more than two", () => {
+    expect(twoSum(3, 3, 3, 4)).toMatch(/only two Numbers/);
   });
 });
 

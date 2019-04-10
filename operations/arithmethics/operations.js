@@ -1,6 +1,8 @@
 //Addition Operation
-const add = function(a, b) {
-  return typeof a === "number" && typeof b === "number" ? a + b : false;
+const twoSum = function(a, b) {
+  return typeof a === "number" && typeof b === "number"
+    ? a + b
+    : "Inputs Must be Numbers";
 };
 
 //Adding Infinite sum of numbers
@@ -48,4 +50,4 @@ const joinString = function(a, b) {
   return typeof a === "string" && typeof b === "string" ? a.concat(b) : false;
 };
 
-module.exports = { add, addAll, subtract, multiply, divide, joinString };
+module.exports = { twoSum, addAll, subtract, multiply, divide, joinString };
