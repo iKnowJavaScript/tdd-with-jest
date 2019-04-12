@@ -1,5 +1,4 @@
-
-
+const showGitHubRepos = require("./getRepo");
 
 describe("Mock testing getRepo implementation", () => {
   it("Make sure fetchRepo function is called", async () => {

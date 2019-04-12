@@ -1,15 +1,13 @@
 const fetch = require("node-fetch")
-//Takes a username as an argument and makes a call to GitHub API
-//and returns all the repositoriesowned by the user as an array.
 
-async function showGitHubRepos(handle) {
+function showGitHubRepos(handle) {
   const url = `https://api.github.com/users/${handle}/repos`;
-  const response = await fetch(url);
-  const repos = await response.json();
+  return fetch(url, { method: "GET" }).then(response =>
+    response.map(elem => elem.name)
+  );
 
-  return repos.map(repo => repo.name);
 }
-showGitHubRepos("whiteh").then(data => console.log(data));
+//showGitHubRepos("whiteh").then(data => console.log(data));
 
 const myrepo = [
   "Ball-Bouncing-and-Collision",
