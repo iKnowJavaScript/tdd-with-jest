@@ -5,6 +5,7 @@ node_modules
 package-lock.json
 *tempCodeRunnerFile.js
 /coverage
+OOP.js
 # 
 # Optional npm cache directory
 .npm
