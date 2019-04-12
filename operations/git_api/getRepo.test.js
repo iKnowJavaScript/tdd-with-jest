@@ -11,4 +11,7 @@ describe("Mock testing getRepo implementation", () => {
 
     expect(repos).toEqual([]);
   });
+  it("Parameter should only be Numbers", () => {
+    expect(showGitHubRepos(345)).toMatch(/Please Input a valid Git username/);
+  });
 });
